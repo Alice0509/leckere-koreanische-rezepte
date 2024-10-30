@@ -1,0 +1,43 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #ffffff;
+}
+
+.header-logo {
+  margin-right: 50px;
+  cursor: pointer;
+
+  @media (max-width: 768px) {
+    margin-right: 20px;
+  }
+}
+
+.header-title-wrapper {
+  flex: 1;
+  text-align: center;
+}
+
+.headerTitle {
+  font-size: 1.5rem; /* 적절한 폰트 크기로 조정 */
+  font-weight: bold;
+  margin: 0; /* 마진을 제거하여 줄 간격을 줄임 */
+  text-align: center; /* 중앙 정렬 */
+  
+  @media (max-width: 768px) {
+    font-size: 18px;
+  }
+}
+.zutatenLink {
+  font-size: 0.9em; /* 제목보다는 작은 크기 */
+  color: #333; /* 본문과 자연스럽게 어우러지는 색상 */
+  text-decoration: none;
+  margin-left: 20px; /* 타이틀과의 간격 */
+}
+
+.zutatenLink:hover {
+  text-decoration: underline; /* 마우스 호버 시 밑줄 */
+  color: #555;
+}

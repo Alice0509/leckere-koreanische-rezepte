@@ -1,0 +1,42 @@
+/* Recipe.module.css */
+
+/* 레시피 페이지 컨테이너 스타일 */
+.pageContainer {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9; /* 배경색 */
+    border-radius: 8px; /* 모서리 둥글기 */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
+  }
+  
+  /* 제목 스타일 */
+  .title {
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-align: center; /* 제목 중앙 정렬 */
+  }
+  
+  /* 레시피 섹션 스타일 */
+  .recipeSection {
+    margin-bottom: 30px; /* 섹션 간격 */
+  }
+  
+  .imageContainer {
+    text-align: center; /* 이미지 중앙 정렬 */
+  }
+  
+  .videoContainer {
+    margin: 20px 0; /* 비디오와 간격 */
+  }
+  
+  /* 조리 단계 섹션 스타일 */
+  .stepsSection {
+    margin-top: 20px; /* 단계 섹션 위쪽 여백 */
+  }
+  
+  /* 댓글 시스템 스타일 */
+  .comments {
+    margin-top: 30px; /* 댓글 섹션 간격 */
+  }
+  

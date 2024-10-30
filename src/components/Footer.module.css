@@ -1,0 +1,25 @@
+/* src/components/Footer.module.css */
+.footer {
+  background-color: #f5f5f5;
+  padding: 10px 0;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #555;
+  border-top: 1px solid #ddd;
+}
+
+  
+  .footer p {
+    margin: 0;
+  }
+  
+  .socialLinks a {
+    color: #838b87;
+    text-decoration: none;
+    margin: 0 8px;
+  }
+  
+  .socialLinks a:hover {
+    text-decoration: underline;
+  }
+  

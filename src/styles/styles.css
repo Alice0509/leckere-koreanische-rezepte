@@ -1,0 +1,206 @@
+/* Allgemeine Stile */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Title styling */
+  h1 {
+    text-align: center;
+    border-bottom: solid rgb(219, 215, 215);
+    margin: 0;
+    padding: 20px;
+  }
+  
+  h2, h3 {
+    text-align: center;
+  }
+  
+  ul, h3 {
+    border-right: 1px solid rgb(219, 215, 215);
+    width: 140px;
+    margin: 0;
+    padding: 15px;
+  }
+  
+  li {
+    padding: 5px;
+  }
+  
+  /* Grid layout */
+  #grid {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+  }
+  
+  /* Menü-Stil */
+  .menu-container {
+    display: flex; /* Flexbox für die horizontale Ausrichtung */
+    justify-content: center; /* Menüelemente zentrieren */
+    margin: 20px auto;
+  }
+  
+  .menu-list {
+    display: flex; /* Flexbox für die Anzeige der Menükarten in einer Reihe */
+    flex-wrap: wrap; /* Wrap-Menükarten für responsive Design */
+  }
+  
+  .menu-card {
+    width: 200px; /* Feste Breite für die Menükarten */
+    margin: 20px;
+    display: none; /* Alle Menükarten anfangs ausblenden */
+  }
+  
+  .menu-card img {
+    width: 100%; /* Breite anpassen, um Responsivität zu gewährleisten */
+    height: auto; /* Automatische Höhe beibehalten */
+    border-radius: 10px;
+  }
+  
+  
+  .menu-card p {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  /* Suchfeld-Stil */
+  #searchContainer {
+    text-align: center; /* Zentrieren */
+    margin: 20px 0; /* Oben und unten Rand hinzufügen */
+  }
+  
+  .icon {
+    font-size: 20px; /* Größe des Icons */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 800px) {
+      .menu-container {
+          flex-direction: column; /* Menü in Spalten anzeigen */
+          align-items: center; /* Zentrieren der Menüelemente */
+      }
+  
+      ul, h3 {
+          border-right: none; /* Entfernen des rechten Rahmens */
+      }
+  
+      h1 {
+          border-bottom: none; /* Entfernen des unteren Rahmens */
+      }
+  
+      .menu-card {
+          width: 80%; /* Breite der Menükarten anpassen für mobile Ansichten */
+      }
+  }
+  
+  /* Menu card styling */
+  .menu-item {
+    display: inline-block;
+    width: 200px;
+    margin: 20px;
+  }
+  
+  /* Hover-Effekt */
+  .menu-card:hover {
+    background-color: #f0f0f0; /* Hintergrundfarbe bei Mouseover ändern */
+  }
+  
+  /* Zusätzliche CSS hier nach Bedarf hinzufügen */
+  
+  
+  /* 레시피 준비 중 메시지 스타일 */
+  .recipe-placeholder {
+    font-size: 1.1em;
+    color: #555;
+    text-align: center;
+    margin-top: 10px;
+    padding: 15px;
+    background-color: #f3f3f3;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    width: 80%;
+    margin: 20px auto;
+  }
+  
+  /* 반응형 디자인 */
+  @media (max-width: 800px) {
+    .recipe-placeholder {
+        width: 90%;
+        font-size: 1em;
+    }
+  }
+  
+  
+  /* 양념 페이지 스타일 */
+  .seasoning-container {
+    width: 80%;
+    margin: 20px auto;
+    font-family: Arial, sans-serif;
+  }
+  
+  .seasoning-item {
+    margin-bottom: 30px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+  }
+  
+  .seasoning-item h2 {
+    color: #333;
+    margin-bottom: 8px;
+  }
+  
+  .seasoning-item p {
+    color: #555;
+    line-height: 1.6;
+  }
+   
+  @media (max-width: 800px) {
+    .seasoning-container {
+        width: 90%;
+    }
+  }
+  /* src/styles/style.css */
+
+/* 일반적인 스타일 */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* 타이틀 스타일 */
+h1 {
+  text-align: center;
+  border-bottom: solid rgb(219, 215, 215);
+  margin: 0;
+  padding: 20px;
+}
+
+/* 메뉴 스타일 */
+.menu-card {
+  width: 200px;
+  margin: 20px;
+  display: inline-block;
+}
+/* 헤더 스타일 */
+.header {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #ffffff;
+}
+
+.header-logo {
+  margin-right: 20px; /* 로고와 제목 사이 여백 */
+  cursor: pointer;
+}
+
+.header-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+}

@@ -1,0 +1,101 @@
+[
+    { 
+      "id": 1, 
+      "name": "Danpatbbang (단팥빵)", 
+      "image": "/coding1.jpg", 
+      "link": "/Page1",
+      "ingredients": [
+        "Weizenmehl (Typ 550) 200 g",
+        "Trockenhefe 4 g",
+        "Salz 3 g",
+        "Zucker 30 g",
+        "Butter 30 g",
+        "Ei (Größe S oder M) 1 Stück",
+        "Milch 70 g",
+        "Rote Bohnenpaste (Anko) 320 g"
+      ],
+      "instructions": [
+        "In eine Schüssel lauwarme Milch und Ei geben, dann Weizenmehl, Zucker, Salz, Backpulver und Hefe abmessen und hinzufügen. Dabei das Ei verquirlen und etwas davon aufbewahren, bevor es in die Schüssel kommt.",
+        "Sobald sich der Teig im Teigkneter zu einer Kugel formt, Butter hinzufügen und weiterkneten.",
+        "Den Teig für die erste Gärung etwa 50 Minuten ruhen lassen.",
+        "Währenddessen die Rote Bohnenpaste (Anko) in 40 g große Kugeln formen und bereitstellen.",
+        "Nach der ersten Gärung den Teig durchkneten, um die Luft herauszulassen, und in 8 Stücke teilen. Den Teig mit Folie abdecken und etwa 10 Minuten für die Zwischenruhe ruhen lassen.",
+        "Nach der Zwischenruhe den Teig flach ausrollen, die Bohnenpaste darauf legen und den Teig zu einer runden Form schließen.",
+        "Den Teig flach drücken und mit einem Nudelholz in der Mitte kräftig drücken. Mit einer Schere sechs Schnitte in den Teig machen.",
+        "Den Teig mit Abstand auf ein Backblech legen und für die zweite Gärung etwa 45 Minuten ruhen lassen.",
+        "Nach der Gärung das zuvor aufbewahrte Ei mit etwas Wasser vermischen und den Teig damit bestreichen. Für die Dekoration können Sie Walnüsse, schwarze Sesamsamen oder andere Nüsse verwenden.",
+        "Im vorgeheizten Ofen bei 190 Grad etwa 10 Minuten backen.",
+        "Fertig sind die süßen Bohnenbrötchen (Danpatbbang)! Dort entstehen etwa 7-8 Brötchen."
+      ]
+    },
+    { 
+      "id": 2, 
+      "name": "Soboro-Brot (소보로빵)", 
+      "image": "/coding2.jpeg", 
+      "link": "/Page2",
+      "ingredients": [
+        "Weizenmehl (Typ 550) 200 g",
+        "Zucker 30 g",
+        "Butter 30 g",
+        "Ei (Größe S oder M) 1 Stück",
+        "Milch 70 g"
+      ],
+      "instructions": [
+        "Teig für das Brot machen, indem alle Zutaten vermischt werden.",
+        "Den Teig kneten, bis er elastisch und glatt ist.",
+        "Teig abgedeckt etwa 30 Minuten ruhen lassen, bis er aufgeht.",
+        "Den Teig in Portionen teilen und in Form bringen.",
+        "Im Ofen bei 180 Grad backen, bis sie goldbraun sind.",
+        "Fertig sind die Soboro-Brötchen!"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Kimchi gebratener Reis (김치볶음밥)",
+      "image": "/kimchi_fried_rice.jpg",
+      "link": "/recipes/3",
+      "ingredients": [], 
+      "instructions": []  
+    },
+    {
+      "id": 4,
+      "name": "Schokoladenkekse (초코칩쿠키)",
+      "image": "/chocolate_chip_cookie.jpg",
+      "link": "/recipes/4",
+      "ingredients": [], 
+      "instructions": []  
+    },
+    {
+      "id": 5,
+      "name": "Pekannusskuchen (피칸파이)",
+      "image": "/pecan_pie.jpg",
+      "link": "/recipes/5",
+      "ingredients": [], 
+      "instructions": []  
+    },
+    {
+      "id": 6,
+      "name": "Scharfes Rindfleischsuppen (파육개장)",
+      "image": "/spicy_beef_soup.jpg",
+      "link": "/recipes/6",
+      "ingredients": [], 
+      "instructions": []  
+    },
+    {
+      "id": 7,
+      "name": "Kimchi (김치)",
+      "image": "/Kimchi.jpg",
+      "link": "/recipes/7",
+      "ingredients": [], 
+      "instructions": []  
+    },
+    {
+        "id": 8,
+        "name": "Neue Rezept",
+        "image": "/path/to/image.jpg",
+        "link": "/recipes/8",
+        "ingredients": [], 
+        "instructions": []  
+    }
+  ]
+  
