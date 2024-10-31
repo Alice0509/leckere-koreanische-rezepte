@@ -3,9 +3,7 @@ import { DiscussionEmbed } from 'disqus-react';
 import styles from '../../styles/Recipe.module.css';
 
 const RecipePage = ({ recipe }) => {
-  // useRouter를 사용하지 않을 경우 삭제 가능
-  // const router = useRouter(); 
-
+  // recipe가 없는 경우 준비 중 메시지 표시
   if (!recipe) {
     return (
       <div className={styles.pageContainer}>
@@ -17,7 +15,8 @@ const RecipePage = ({ recipe }) => {
   return (
     <div className={styles.pageContainer}>
       <h1 className={styles.title}>{recipe.name}</h1>
-      <img src={recipe.image} alt={recipe.name} />
+      {/* 절대 경로로 이미지 접근 */}
+      <img src={`${process.env.NEXT_PUBLIC_BASE_URL}${recipe.image}`} alt={recipe.name} />
       <h2>Zutaten:</h2>
       <ul>
         {recipe.ingredients.length > 0 ? (
@@ -42,7 +41,7 @@ const RecipePage = ({ recipe }) => {
       <DiscussionEmbed
         shortname="my-korean-food-site"
         config={{
-          url: `${process.env.NEXT_PUBLIC_BASE_URL}/recipes/${recipe.id}`,
+          url: `${process.env.NEXT_PUBLIC_BASE_URL}/recipes/${recipe.id}`, // 절대 경로로 URL 설정
           identifier: String(recipe.id), // recipe.id를 문자열로 변환
           title: recipe.name,
           language: 'de_DE'
@@ -54,18 +53,19 @@ const RecipePage = ({ recipe }) => {
 
 // JSON 파일에 접근하기 위한 절대 경로 사용
 export async function getStaticPaths() {
-  const url = `${process.env.NEXT_PUBLIC_BASE_URL}/data/menuItems.json`;
+  const url = `${process.env.NEXT_PUBLIC_BASE_URL}/data/menuItems.json`; // 절대 경로 사용
   console.log('Fetching paths from:', url);
 
   const res = await fetch(url);
 
   if (!res.ok) {
     console.error('Failed to fetch menu items:', res.statusText);
-    return { paths: [], fallback: false };
+    return { paths: [], fallback: false }; // 경로가 없을 경우 처리
   }
 
   const menuItems = await res.json();
 
+  // 경로를 ID에 따라 매핑
   const paths = menuItems.map((item) => ({
     params: { id: item.id.toString() }
   }));
@@ -75,7 +75,7 @@ export async function getStaticPaths() {
 
 // JSON 파일에 접근하기 위한 절대 경로 사용
 export async function getStaticProps({ params }) {
-  const url = `${process.env.NEXT_PUBLIC_BASE_URL}/data/menuItems.json`;
+  const url = `${process.env.NEXT_PUBLIC_BASE_URL}/data/menuItems.json`; // 절대 경로 사용
   console.log('Fetching recipe from:', url);
 
   const res = await fetch(url);
@@ -84,7 +84,7 @@ export async function getStaticProps({ params }) {
     console.error('Failed to fetch menu items:', res.statusText);
     return {
       props: {
-        recipe: null,
+        recipe: null, // 레시피가 없을 경우 null 반환
       }
     };
   }
