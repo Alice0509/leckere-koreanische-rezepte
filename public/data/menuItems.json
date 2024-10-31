@@ -52,7 +52,7 @@
     {
       "id": 3,
       "name": "Kimchi gebratener Reis (김치볶음밥)",
-      "image": "/kimchi_fried_rice.jpg",
+      "image": "/kimchifriedrice.jpg",
       "link": "/recipes/3",
       "ingredients": [], 
       "instructions": []  
@@ -89,13 +89,6 @@
       "ingredients": [], 
       "instructions": []  
     },
-    {
-        "id": 8,
-        "name": "Neue Rezept",
-        "image": "/path/to/image.jpg",
-        "link": "/recipes/8",
-        "ingredients": [], 
-        "instructions": []  
-    }
+
   ]
   

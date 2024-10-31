@@ -1,4 +1,3 @@
-// src/pages/Home.js
 import React, { useState, useEffect } from 'react';
 import Slider from '../components/Slider';
 import MenuCount from '../components/MenuCount'; // MenuCount 컴포넌트 가져오기
@@ -14,7 +13,12 @@ const Home = () => {
   useEffect(() => {
     const fetchMenuItems = async () => {
       const response = await fetch('/data/menuItems.json'); // public 폴더의 JSON 파일 경로
+      if (!response.ok) {
+        console.error("Failed to fetch menu items");
+        return;
+      }
       const data = await response.json();
+      console.log(data); // 가져온 데이터 출력
       setMenuItems(data); // 가져온 데이터로 상태 업데이트
     };
 
