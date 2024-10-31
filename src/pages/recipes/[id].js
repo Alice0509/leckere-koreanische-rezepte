@@ -1,4 +1,3 @@
-// src/pages/recipes/[id].js
 import React from 'react';
 import { useRouter } from 'next/router';
 import { DiscussionEmbed } from 'disqus-react';
@@ -16,7 +15,7 @@ const RecipePage = ({ recipe }) => {
   }
 
   return (
-    <div className={styles.pageContainer}> 
+    <div className={styles.pageContainer}>
       <h1 className={styles.title}>{recipe.name}</h1>
       <img src={recipe.image} alt={recipe.name} />
       <h2>Zutaten:</h2>
@@ -55,7 +54,10 @@ const RecipePage = ({ recipe }) => {
 
 // JSON 파일에 접근하기 위한 절대 경로 사용
 export async function getStaticPaths() {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/data/menuItems.json`); // 절대 경로 사용
+  const url = `${process.env.NEXT_PUBLIC_BASE_URL}/data/menuItems.json`; // 절대 경로 사용
+  console.log('Fetching paths from:', url); // 추가된 로그
+
+  const res = await fetch(url);
 
   if (!res.ok) {
     console.error('Failed to fetch menu items:', res.statusText);
@@ -73,7 +75,10 @@ export async function getStaticPaths() {
 
 // JSON 파일에 접근하기 위한 절대 경로 사용
 export async function getStaticProps({ params }) {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/data/menuItems.json`); // 절대 경로 사용
+  const url = `${process.env.NEXT_PUBLIC_BASE_URL}/data/menuItems.json`; // 절대 경로 사용
+  console.log('Fetching recipe from:', url); // 추가된 로그
+
+  const res = await fetch(url);
 
   if (!res.ok) {
     console.error('Failed to fetch menu items:', res.statusText);
