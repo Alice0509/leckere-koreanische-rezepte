@@ -1,10 +1,10 @@
 import React from 'react';
-import { useRouter } from 'next/router';
 import { DiscussionEmbed } from 'disqus-react';
 import styles from '../../styles/Recipe.module.css';
 
 const RecipePage = ({ recipe }) => {
-  const router = useRouter();
+  // useRouter를 사용하지 않을 경우 삭제 가능
+  // const router = useRouter(); 
 
   if (!recipe) {
     return (
@@ -42,8 +42,8 @@ const RecipePage = ({ recipe }) => {
       <DiscussionEmbed
         shortname="my-korean-food-site"
         config={{
-          url: `${process.env.NEXT_PUBLIC_BASE_URL}/recipes/${recipe.id}`, // 환경 변수를 사용한 URL
-          identifier: recipe.id,
+          url: `${process.env.NEXT_PUBLIC_BASE_URL}/recipes/${recipe.id}`,
+          identifier: String(recipe.id), // recipe.id를 문자열로 변환
           title: recipe.name,
           language: 'de_DE'
         }}
@@ -54,14 +54,14 @@ const RecipePage = ({ recipe }) => {
 
 // JSON 파일에 접근하기 위한 절대 경로 사용
 export async function getStaticPaths() {
-  const url = `${process.env.NEXT_PUBLIC_BASE_URL}/data/menuItems.json`; // 절대 경로 사용
-  console.log('Fetching paths from:', url); // 추가된 로그
+  const url = `${process.env.NEXT_PUBLIC_BASE_URL}/data/menuItems.json`;
+  console.log('Fetching paths from:', url);
 
   const res = await fetch(url);
 
   if (!res.ok) {
     console.error('Failed to fetch menu items:', res.statusText);
-    return { paths: [], fallback: false }; // 경로가 없을 경우 처리
+    return { paths: [], fallback: false };
   }
 
   const menuItems = await res.json();
@@ -75,8 +75,8 @@ export async function getStaticPaths() {
 
 // JSON 파일에 접근하기 위한 절대 경로 사용
 export async function getStaticProps({ params }) {
-  const url = `${process.env.NEXT_PUBLIC_BASE_URL}/data/menuItems.json`; // 절대 경로 사용
-  console.log('Fetching recipe from:', url); // 추가된 로그
+  const url = `${process.env.NEXT_PUBLIC_BASE_URL}/data/menuItems.json`;
+  console.log('Fetching recipe from:', url);
 
   const res = await fetch(url);
 
@@ -84,7 +84,7 @@ export async function getStaticProps({ params }) {
     console.error('Failed to fetch menu items:', res.statusText);
     return {
       props: {
-        recipe: null, // 레시피가 없을 경우 null 반환
+        recipe: null,
       }
     };
   }
