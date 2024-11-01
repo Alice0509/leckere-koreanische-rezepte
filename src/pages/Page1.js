@@ -1,11 +1,11 @@
 // src/pages/Page1.js
 import React from 'react';
 import styles from '../styles/Recipe.module.css';
-import { DiscussionEmbed } from 'disqus-react'; // DiscussionEmbed 가져오기
+import Disqus from '../components/Disqus'; // Disqus 컴포넌트 가져오기
 
 const Page1 = () => {
   const article = {
-    url: 'http://localhost:3000/Page1', // 로컬 주소 설정
+    url: `${process.env.NEXT_PUBLIC_BASE_URL}${process.env.BASE_PATH}/Page1`, // 로컬 주소 설정
     id: '1',                             // 고유 ID
     title: 'Danpatbbang (단팥빵)',       // 페이지 제목
   };
@@ -58,16 +58,9 @@ const Page1 = () => {
         </ol>
       </section>
 
-      {/* Disqus 댓글 시스템 */}
-      <DiscussionEmbed
-        shortname="my-korean-food-site" // Disqus shortname
-        config={{
-          url: article.url,
-          identifier: article.id,
-          title: article.title,
-          language: 'de_DE' // 사용 언어
-        }}
-      />
+      {/* Disqus 댓글 시스템 추가 */}
+      <Disqus article={article} />
+     
     </div>
   );
 };

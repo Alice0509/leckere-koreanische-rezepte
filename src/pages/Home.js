@@ -13,7 +13,7 @@ const Home = () => {
 
   useEffect(() => {
     const fetchMenuItems = async () => {
-      const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/data/menuItems.json`); // 절대 경로 사용
+    const response = await fetch('/data/menuItems.json');
       if (!response.ok) {
         console.error("Failed to fetch menu items");
         return;

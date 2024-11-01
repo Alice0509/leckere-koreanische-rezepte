@@ -1,10 +1,9 @@
 const nextConfig = {
-  output: 'export', // 정적 사이트로 내보내기
   images: {
-    unoptimized: true, // 이미지 최적화 비활성화
+    unoptimized: process.env.NODE_ENV === 'development', // 개발 환경에서만 비활성화
   },
-  basePath: '/leckere-koreanische-rezepte', // GitHub Pages에서 사용하는 서브 경로
-  assetPrefix: '/leckere-koreanische-rezepte/', // 정적 자산 경로
+  basePath: process.env.BASE_PATH || '', // BASE_PATH 환경 변수에 따라 설정
+  assetPrefix: process.env.NEXT_PUBLIC_BASE_URL ? `${process.env.NEXT_PUBLIC_BASE_URL}/` : '', // BASE_URL에 따라 정적 자산 경로 설정
 };
 
 module.exports = nextConfig;

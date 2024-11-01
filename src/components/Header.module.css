@@ -6,7 +6,7 @@
   background-color: #ffffff;
 }
 
-.header-logo {
+.headerLogo {
   margin-right: 50px;
   cursor: pointer;
 
@@ -15,7 +15,7 @@
   }
 }
 
-.header-title-wrapper {
+.headerTitleWrapper {
   flex: 1;
   text-align: center;
 }

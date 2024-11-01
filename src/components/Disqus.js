@@ -2,18 +2,25 @@
 import React from 'react';
 import { DiscussionEmbed } from 'disqus-react';
 
-const Disqus = ({ article }) => {
+const Disqus = ({ id, title }) => {
+  const article = {
+    url: `${process.env.NEXT_PUBLIC_BASE_URL}/recipes/${id}`, // 절대 경로 설정
+    id: String(id), // ID를 문자열로 변환
+    title: title, // 레시피 제목
+  };
+
   return (
     <DiscussionEmbed
       shortname="my-korean-food-site"
       config={{
-        url: article.url,          // 현재 페이지의 URL
-        identifier: article.id,     // 고유 식별자 (예: 레시피 ID)
-        title: article.title,       // 페이지 제목
-        language: 'de_DE',         
+        url: article.url,
+        identifier: article.id,
+        title: article.title,
+        language: 'de_DE', // 사용할 언어 설정
       }}
     />
   );
 };
 
 export default Disqus;
+

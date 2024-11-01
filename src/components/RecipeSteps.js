@@ -24,6 +24,15 @@ export default function RecipeSteps() {
         <button onClick={prevStep} className={styles.navButton}>이전</button>
         <button onClick={nextStep} className={styles.navButton}>다음</button>
       </div>
+      <div className={styles.stepList}>
+        {steps.map((step) => (
+          <div key={step.id} className={styles.stepItem}>
+            {/* 각 단계마다 고유한 key 설정 */}
+            <img src={step.image} alt={`Step ${step.id}`} />
+            <p>{step.text}</p>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }

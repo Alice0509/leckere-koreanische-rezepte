@@ -11,7 +11,7 @@ export default function MyApp({ Component, pageProps }) {
   useEffect(() => {
     // Google Analytics 스크립트 추가
     const script = document.createElement('script');
-    script.src = 'https://www.googletagmanager.com/gtag/js?id=G-5GKGCMDCJ8';
+    script.src = 'https://www.googletagmanager.com/gtag/js?id=G-9E1TL68NFR';
     script.async = true;
     document.head.appendChild(script);
 
@@ -20,10 +20,10 @@ export default function MyApp({ Component, pageProps }) {
       window.dataLayer.push(arguments);
     };
     window.gtag('js', new Date());
-    window.gtag('config', 'G-5GKGCMDCJ8');
+    window.gtag('config', 'G-9E1TL68NFR');
 
     const handleRouteChange = (url) => {
-      window.gtag('config', 'G-5GKGCMDCJ8', {
+      window.gtag('config', 'G-9E1TL68NFR', {
         page_path: url,
       });
     };

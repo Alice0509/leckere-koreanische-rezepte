@@ -1,6 +1,7 @@
+// src/pages/recipes/[id].js
 import React from 'react';
-import { DiscussionEmbed } from 'disqus-react';
 import styles from '../../styles/Recipe.module.css';
+import Disqus from '../../components/Disqus'; // Disqus 컴포넌트 임포트
 
 const RecipePage = ({ recipe }) => {
   // recipe가 없는 경우 준비 중 메시지 표시
@@ -11,6 +12,13 @@ const RecipePage = ({ recipe }) => {
       </div>
     );
   }
+
+  // 현재 레시피에 대한 article 객체 정의
+  const article = {
+    url: `${process.env.NEXT_PUBLIC_BASE_URL}${process.env.BASE_PATH}/recipes/${recipe.id}`, // 절대 경로로 URL 설정
+    id: String(recipe.id), // recipe.id를 문자열로 변환
+    title: recipe.name, // 레시피 제목
+  };
 
   return (
     <div className={styles.pageContainer}>
@@ -38,15 +46,8 @@ const RecipePage = ({ recipe }) => {
         )}
       </ol>
 
-      <DiscussionEmbed
-        shortname="my-korean-food-site"
-        config={{
-          url: `${process.env.NEXT_PUBLIC_BASE_URL}/recipes/${recipe.id}`, // 절대 경로로 URL 설정
-          identifier: String(recipe.id), // recipe.id를 문자열로 변환
-          title: recipe.name,
-          language: 'de_DE'
-        }}
-      />
+      {/* Disqus 댓글 시스템 */}
+      <Disqus article={article} /> {/* Disqus 컴포넌트 사용 */}
     </div>
   );
 };
@@ -67,7 +68,7 @@ export async function getStaticPaths() {
 
   // 경로를 ID에 따라 매핑
   const paths = menuItems.map((item) => ({
-    params: { id: item.id.toString() }
+    params: { id: item.id.toString() } // ID를 문자열로 변환하여 경로 설정
   }));
 
   return { paths, fallback: false };
@@ -90,11 +91,11 @@ export async function getStaticProps({ params }) {
   }
 
   const menuItems = await res.json();
-  const recipe = menuItems.find((item) => item.id === parseInt(params.id));
+  const recipe = menuItems.find((item) => item.id === parseInt(params.id)); // ID에 따라 레시피 찾기
 
   return {
     props: {
-      recipe: recipe || null,
+      recipe: recipe || null, // 레시피 반환
     }
   };
 }

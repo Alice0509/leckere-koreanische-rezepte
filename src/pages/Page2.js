@@ -1,11 +1,11 @@
 // src/pages/Page2.js
 import React from 'react';
 import styles from '../styles/Recipe.module.css'; // 스타일 파일 가져오기
-import { DiscussionEmbed } from 'disqus-react'; // DiscussionEmbed 가져오기
+import Disqus from '../components/Disqus'; // Disqus 컴포넌트 가져오기
 
 const Page2 = () => {
   const article = {
-    url: 'http://localhost:3000/Page2', // 로컬 주소 설정
+    url: `${process.env.NEXT_PUBLIC_BASE_URL}${process.env.BASE_PATH}/Page2`, // 로컬 주소 설정
     id: '2',                             // 고유 ID
     title: 'Soboro-Brot (소보로빵)',     // 페이지 제목
   };
@@ -13,9 +13,8 @@ const Page2 = () => {
   return (
     <div className={styles.pageContainer}> {/* 스타일 적용 */}
       <h1 className={styles.title}>Soboro-Brot (소보로빵)</h1> {/* 제목 스타일 적용 */}
-      
-      <p>
-        <strong>[Zutaten für das Brot]</strong><br />
+      <section className={styles.recipeSection}></section>
+      <p><strong>[Zutaten für das Brot]</strong><br />
         Weizenmehl (Typ 550) 200 g<br />
         Trockenhefe 4 g<br />
         Salz 3 g<br />
@@ -52,10 +51,10 @@ const Page2 = () => {
         Alles gut vermischen, um den Keksteig zu formen.
       </p>
 
-      <div style={{ textAlign: 'center' }}>
+      <div className={styles.imageContainer}>
         <img width="100%" src="/coding2.jpeg" alt="Soboro-Brot" />
       </div>
-
+      <section className={styles.stepsSection}>
       <p><strong>[Zubereitung]</strong></p>
       <ol>
         <li>Den Teig für das Brot in einer Schüssel mit lauwarmer Milch, Ei, Mehl, Zucker, Salz, Backpulver und Hefe vermischen. Das Ei leicht aufschlagen und etwas davon beiseitestellen.</li>
@@ -70,17 +69,10 @@ const Page2 = () => {
         <li>Den Ofen auf 190 Grad vorheizen und die Brote etwa 10 Minuten backen.</li>
         <li>Soboro-Brot ist fertig!</li>
       </ol>
+      </section>
 
-      {/* Disqus 댓글 시스템 */}
-      <DiscussionEmbed
-        shortname="my-korean-food-site" // Disqus shortname
-        config={{
-          url: article.url,
-          identifier: article.id,
-          title: article.title,
-          language: 'de_DE' // 사용 언어
-        }}
-      />
+      {/* Disqus 댓글 시스템 추가 */}
+      <Disqus article={article} />
     </div>
   );
 };
