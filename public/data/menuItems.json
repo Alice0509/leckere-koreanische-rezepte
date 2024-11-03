@@ -51,21 +51,29 @@
     },
     {
       "id": 3,
-      "name": "Kimchi gebratener Reis (김치볶음밥)",
-      "image": "/kimchifriedrice.jpg",
+      "name": "Tteokbokki (떡볶이)",
+      "image": "/tteokbokki.png",
       "link": "/recipes/3",
+      "description": "Ich möchte Ihnen das Rezept für Tteokbokki vorstellen. In Korea gibt es wirklich viele verschiedene Arten von Tteokbokki, sodass es viele verschiedene Geschmäcker und Zubereitungsarten gibt. Daher werde ich in Zukunft viele Rezepte für Tteokbokki vorstellen.\n\nDas wichtigste Element in Tteokbokki sind die beiden Arten von Teig, die verwendet werden. Es gibt die aus Weizenmehl hergestellten Teigstücke, die als 'Milttteok' bekannt sind, und die aus Reismehl hergestellten Teigstücke, die 'Reistteok' genannt werden. In Korea gibt es also auch die Unterscheidung zwischen Fans von Reistteok und Fans von Milttteok. Man könnte sagen, dass Reistteok etwas zäher ist. Viele Menschen behaupten jedoch, dass die Soße besser in Milttteok eindringt und es dadurch leckerer schmeckt.\n\nIn Deutschland kann man diese Zutaten oft in asiatischen Märkten finden. Ich kaufe alle verfügbaren Sorten. Informationen über die verschiedenen Arten von Teig finden Sie auf der Seite 'Zutaten'.",
+      "tips": [
+        "Wenn man nach koreanischen Rezepten sucht, gibt es einen wichtigen Aspekt, den man oft übersehen kann: die Maßeinheit. Der koreanische Esslöffel ist etwas kleiner als der normale Esslöffel. Viele Rezepte geben die Mengenangaben basierend auf koreanischen Esslöffeln an, weil es so praktisch ist."
+      ],
+      "servings": 2,
       "ingredients": [
-        "밥 2컵",
-        "김치 1컵",
-        "식용유 2큰술",
-        "파 1대",
-        "계란 1개"
+        "Tteokbokki-Tteok 300 g",
+        "Wasser 360 ml",
+        "Lauchzwiebeln 1 Stück",
+        "Gochujang 1,3 EL",
+        "Zucker 2 EL",
+        "Chilipulver (Gochugaru) 1 EL",
+        "Sojasauce 1,3 EL",
+        "Zusätzlich können auch Fischkuchen, Sesam, Kohl und gekochte Eier hinzugefügt werden, um das Gericht lecker zu machen."
       ],
       "instructions": [
-        "팬에 식용유를 두르고 다진 파를 볶습니다...",
-        "김치를 넣고 함께 볶습니다...",
-        "밥을 넣고 잘 섞어가며 볶습니다...",
-        "마지막에 계란을 넣고 섞어줍니다."
+        "Wasser 360 ml in einem Topf zum Kochen bringen und die Tteokbokki-Tteok hinzufügen. Wenn die Tteok gefroren ist, vorher kurz in Wasser einweichen.",
+        "Wenn das Wasser kocht, alle Gewürze hinzufügen, gut vermischen und während des Kochens gut umrühren, um ein Ankleben zu vermeiden.",
+        "Wenn die Brühe reduziert ist, Lauchzwiebeln mit einer Schere klein schneiden und etwas Sesam darüber streuen. Fertig!",
+        "Es wird sehr lecker sein!"
       ]
     },
     {

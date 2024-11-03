@@ -24,6 +24,7 @@ const RecipePage = ({ recipe }) => {
     <div className={styles.pageContainer}>
       <h1 className={styles.title}>{recipe.name}</h1>
       <img src={`${process.env.NEXT_PUBLIC_BASE_URL}${recipe.image}`} alt={recipe.name} />
+      
       <h2>Zutaten:</h2>
       <ul>
         {recipe.ingredients.length > 0 ? (
@@ -34,6 +35,7 @@ const RecipePage = ({ recipe }) => {
           <li>Keine Zutaten verfügbar.</li>
         )}
       </ul>
+      
       <h2>Zubereitung:</h2>
       <ol>
         {recipe.instructions.length > 0 ? (
@@ -44,6 +46,25 @@ const RecipePage = ({ recipe }) => {
           <li>Keine Anweisungen verfügbar.</li>
         )}
       </ol>
+
+      {/* 추가된 필드 렌더링 */}
+      <h2>Tipps:</h2>
+      {recipe.tips && recipe.tips.length > 0 ? (
+        <ul>
+          {recipe.tips.map((tip, index) => (
+            <li key={index}>{tip}</li>
+          ))}
+        </ul>
+      ) : (
+        <p>Keine Tipps verfügbar.</p>
+      )}
+
+      <h2>Beschreibung:</h2>
+      <p>{recipe.description || "Keine Beschreibung verfügbar."}</p>
+
+      <h2>Portionen:</h2>
+      <p>{recipe.servings} Portionen</p>
+
       <Disqus article={article} />
     </div>
   );

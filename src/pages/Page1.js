@@ -22,7 +22,7 @@ const Page1 = () => {
           Butter 30 g<br />
           Ei (Größe S oder M) 1 Stück<br />
           Milch 70 g<br />
-          <a href="https://search.yahoo.com/search?fr=mcafee&type=E211KR885G0&p=Rote+Bohnenpaste">Rote Bohnenpaste (Anko) 320 g</a>
+          <a href="https://search.yahoo.com/search?fr=mcafee&type=E211KR885G0&p=Rote+Bohnenpaste" target="_blank" rel="noopener noreferrer">Rote Bohnenpaste (Anko) 320 g</a>
         </p>
         <div className={styles.imageContainer}>
           <img width="100%" src="/coding1.jpg" alt="Rotes Bohnenbrot, das mit Anko gefüllt ist" />

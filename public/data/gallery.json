@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "name": "Gallery Dish 1",
+    "image": "/images/gallery/gallery1.jpg",
+    "description": "Delicious Gallery Dish 1",
+    "comments": []
+  },
+  {
+    "id": 2,
+    "name": "Gallery Dish 2",
+    "image": "/images/gallery/gallery2.jpg",
+    "description": "Tasty Gallery Dish 2",
+    "comments": []
+  },
+  {
+    "id": 3,
+    "name": "Gallery Dish 3",
+    "image": "/images/gallery/gallery3.jpg",
+    "description": "Yummy Gallery Dish 3",
+    "comments": []
+  }
+]

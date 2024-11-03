@@ -1,0 +1,19 @@
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .dish {
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    text-align: center;
+  }
+  
+  .dish img {
+    max-width: 100%;
+    height: auto;
+  }
+  
