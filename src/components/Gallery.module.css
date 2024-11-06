@@ -1,19 +1,72 @@
+/* src/components/Gallery.module.css */
+
 .gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-  }
-  
+  width: 100%;
+  padding: 20px 0;
+}
+
+.dish {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 100%; /* SwiperSlide의 너비에 맞춤 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.dish:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.galleryImage {
+  width: 100%;
+  height: 200px;
+  object-fit: cover; /* 이미지 크기에 맞게 잘림 없이 채우기 */
+}
+
+.dish h2 {
+  margin: 10px;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.dish p {
+  margin: 10px;
+  font-size: 0.95rem;
+  color: #666;
+}
+
+.dish input {
+  width: calc(100% - 20px);
+  padding: 8px;
+  margin: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.dish button {
+  margin: 10px;
+  padding: 8px 16px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.dish button:hover {
+  background-color: #45a049;
+}
+
+.dish div {
+  padding: 10px;
+}
+
+@media (max-width: 600px) {
   .dish {
-    margin: 20px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    text-align: center;
+    width: 100%; /* 모바일에서는 전체 너비 사용 */
   }
-  
-  .dish img {
-    max-width: 100%;
-    height: auto;
-  }
-  
+}

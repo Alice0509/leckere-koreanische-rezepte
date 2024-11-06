@@ -1,3 +1,5 @@
+/* src/styles/styles.css */
+
 /* Allgemeine Stile (기본 스타일) */
 body {
   font-family: Arial, sans-serif;
@@ -5,74 +7,46 @@ body {
   padding: 0;
 }
 
-/* Title styling (타이틀 스타일) */
+/* Titel 스타일 */
+h1, h2, h3 {
+  text-align: center; /* 모든 제목 중앙 정렬 */
+  margin: 0;
+  padding: 20px 0;
+}
+
 h1 {
-  text-align: center;
-  border-bottom: solid rgb(219, 215, 215);
-  margin: 0;
-  padding: 20px;
+  border-bottom: solid 1px rgb(219, 215, 215);
 }
 
-h2, h3 {
-  text-align: center; /* h2 및 h3 중앙 정렬 */
+h2 {
+  font-size: 1.8rem;
+  color: #333;
 }
 
-/* List styling (목록 스타일) */
-ul, h3 {
-  border-right: 1px solid rgb(219, 215, 215);
-  width: 140px;
-  margin: 0;
+h3 {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+/* Liste 스타일 */
+ul {
+  width: auto;
+  margin: 0 auto;
   padding: 15px;
+  max-width: 90%; /* 가로 여백이 여유롭게 보이도록 조정 */
+  list-style-position: inside;
 }
 
 li {
-  padding: 5px;
+  padding: 5px 0;
 }
 
 /* Grid layout (그리드 레이아웃) */
 #grid {
   display: grid;
   grid-template-columns: 220px 1fr;
-}
-
-/* Menü-Stil (메뉴 스타일) */
-.menu-container {
-  display: flex; /* Flexbox를 사용하여 메뉴 요소 정렬 */
-  justify-content: center; /* 메뉴 요소 중앙 정렬 */
-  margin: 20px auto;
-}
-
-.menu-list {
-  display: flex; /* Flexbox로 메뉴 카드 표시 */
-  flex-wrap: wrap; /* 반응형 디자인을 위한 카드 감싸기 */
-}
-
-.menu-card {
-  width: 200px; /* 메뉴 카드 고정 너비 */
-  margin: 20px;
-  display: inline-block;
-}
-
-.menu-card img {
-  width: 100%; /* 이미지 너비 100% */
-  height: auto; /* 자동 높이 유지 */
-  border-radius: 10px; /* 둥근 모서리 */
-}
-
-.menu-card p {
-  font-size: 18px;
-  font-weight: bold;
-  margin-top: 10px;
-}
-
-/* Search field styling (검색 필드 스타일) */
-#searchContainer {
-  text-align: center; /* 중앙 정렬 */
-  margin: 20px 0; /* 상하 여백 추가 */
-}
-
-.icon {
-  font-size: 20px; /* 아이콘 크기 */
+  gap: 20px;
+  padding: 20px;
 }
 
 /* Hover-Effekt (호버 효과) */
@@ -80,91 +54,55 @@ li {
   background-color: #f0f0f0; /* 호버 시 배경색 변경 */
 }
 
-/* 레시피 준비 중 메시지 스타일 */
-.recipe-placeholder {
-  font-size: 1.1em;
-  color: #555;
-  text-align: center;
-  margin: 20px auto; /* 자동 마진으로 중앙 정렬 */
-  padding: 15px;
-  background-color: #f3f3f3;
-  border-radius: 6px;
-  border: 1px solid #ddd;
-  width: 80%; /* 고정 너비 */
-}
-
-/* 양념 페이지 스타일 */
-.seasoning-container {
-  width: 90%;
-  margin: 20px auto;
-}
-
-.seasoning-item {
-  margin-bottom: 30px;
-  padding: 15px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  background-color: #f9f9f9;
-}
-
-.seasoning-item h2 {
-  color: #333;
-  margin-bottom: 8px;
-}
-
-.seasoning-item p {
-  color: #555;
-  line-height: 1.6;
-}
-
-/* Responsive Design (반응형 디자인) */
-@media (max-width: 800px) {
-  .menu-container {
-      flex-direction: column; /* 모바일에서 메뉴를 세로로 표시 */
-      align-items: center; /* 중앙 정렬 */
-  }
-
-  ul, h3 {
-    border-right: 1px solid rgb(219, 215, 215);
-    width: 140px;
-    margin: 0;
-    padding: 15px;
-  }
-  
-
-  h1 {
-      border-bottom: none; /* 제목 아래 테두리 제거 */
-  }
-
-  .menu-card {
-      width: 80%; /* 모바일에서 메뉴 카드 너비 조정 */
-  }
-
-  .recipe-placeholder {
-      width: 90%; /* 모바일에서 메시지 너비 조정 */
-      font-size: 1em; /* 폰트 크기 조정 */
-  }
-
-  .seasoning-container {
-      width: 90%; /* 모바일에서 양념 컨테이너 너비 조정 */
-  }
-}
-
-/* Header styling (헤더 스타일) */
-.header {
+/* 검색창 스타일 */
+#searchContainer {
   display: flex;
+  justify-content: center;
   align-items: center;
+  margin: 20px 0;
+}
+
+#searchInput {
+  width: 300px;
+  padding: 8px;
+  border-radius: 20px;
+  border: 1px solid #ddd;
+  outline: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.2s;
+}
+
+#searchInput:focus {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* 아이콘 스타일 */
+.icon {
+  margin-right: 8px;
+  color: #888;
+  font-size: 20px;
+}
+
+/* 버튼 스타일 */
+.button {
+  margin-top: 20px;
   padding: 10px 20px;
-  background-color: #ffffff;
-}
-
-.header-logo {
-  margin-right: 20px; /* 로고와 제목 사이 여백 */
+  font-size: 16px;
+  background-color: #4CAF50;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
   cursor: pointer;
+  transition: background-color 0.3s;
 }
 
-.header-title {
-  font-size: 24px;
-  font-weight: bold;
-  margin: 0;
+.button:hover {
+  background-color: #45a049;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 800px) {
+  #grid {
+    grid-template-columns: 1fr;
+  }
 }

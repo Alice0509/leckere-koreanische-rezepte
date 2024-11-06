@@ -15,7 +15,7 @@ const AboutPage = () => {
       
       <h2>Warum Diese Webseite?</h2>
       <p>
-        Der Grund, warum ich diese Webseite erstellt habe, ist, dass mein Kind in Zukunft nach meinen Gerichten verlangen kann und ich möchte, dass es sich an die Rezepte erinnert, die ich verwendet habe. Das bedeutet, dass nur die Gerichte, bei denen mein Kind "Daumen hoch" gibt und nach dem Rezept fragt, hier veröffentlicht werden.
+        Der Grund, warum ich diese Webseite erstellt habe, ist, dass mein Kind in Zukunft nach meinen Gerichten verlangen kann und ich möchte, dass es sich an die Rezepte erinnert, die ich verwendet habe. Das bedeutet, dass nur die Gerichte, bei denen mein Kind &quot;Daumen hoch&quot; gibt und nach dem Rezept fragt, hier veröffentlicht werden.
       </p>
 
       <h2>Koreanische Küche in Deutschland</h2>

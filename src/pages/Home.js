@@ -1,13 +1,14 @@
+// src/pages/Home.js
 import React, { useState, useEffect } from 'react';
-import Slider from '../components/Slider';
-import MenuCount from '../components/MenuCount'; // MenuCount 컴포넌트 가져오기
-import Gallery from '../components/Gallery'; // 갤러리 컴포넌트 가져오기
+import Image from 'next/image';
+import MenuCount from '../components/MenuCount';
+import Gallery from '../components/Gallery';
 import styles from './Home.module.css';
 import { FaSearch } from 'react-icons/fa';
 
 const Home = () => {
-  const [menuItems, setMenuItems] = useState([]); // 메뉴 항목을 상태로 정의
-  const [galleryItems, setGalleryItems] = useState([]); // 갤러리 항목 상태 정의
+  const [menuItems, setMenuItems] = useState([]);
+  const [galleryItems, setGalleryItems] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [searchTerm, setSearchTerm] = useState('');
   const itemsToShow = 3;
@@ -21,25 +22,27 @@ const Home = () => {
       }
       const data = await response.json();
       console.log(data); // 가져온 데이터 출력
-      setMenuItems(data); // 가져온 데이터로 상태 업데이트
+      setMenuItems(data);
     };
 
     const fetchGalleryItems = async () => {
-      const response = await fetch('/data/gallery.json'); // gallery.json 파일에서 데이터 가져오기
+      const response = await fetch('/data/gallery.json');
       if (!response.ok) {
         console.error("Failed to fetch gallery items");
         return;
       }
       const data = await response.json();
       console.log(data); // 가져온 데이터 출력
-      setGalleryItems(data); // 가져온 데이터로 상태 업데이트
+      setGalleryItems(data);
     };
 
     fetchMenuItems();
-    fetchGalleryItems(); // 갤러리 데이터 가져오기
+    fetchGalleryItems();
   }, []);
 
   useEffect(() => {
+    if (menuItems.length === 0) return; // Avoid division by zero
+
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + itemsToShow) % menuItems.length);
     }, 15000);
@@ -52,30 +55,29 @@ const Home = () => {
   );
 
   const visibleItems = filteredItems.slice(currentIndex, currentIndex + itemsToShow)
-                    .concat(filteredItems.slice(0, currentIndex + itemsToShow - filteredItems.length));
+    .concat(filteredItems.slice(0, currentIndex + itemsToShow - filteredItems.length));
 
   return (
     <div className={styles.homeContainer}>
-      <MenuCount totalMenus={menuItems.length} /> {/* MenuCount 컴포넌트로 총 메뉴 수 표시 */}
+      <MenuCount totalMenus={menuItems.length} />
 
       <div id="searchContainer">
         <FaSearch className="icon" />
         <input
           type="text"
           id="searchInput"
-          placeholder="Menüelement suchen..." // 검색어 입력 placeholder 텍스트
+          placeholder="Menüelement suchen..."
           onChange={(e) => setSearchTerm(e.target.value)}
         />
       </div>
 
-      <Slider visibleItems={visibleItems} />
-      {/* 필터링된 메뉴 항목 표시 */}
-      <div className="menu-container">
-        <div className="menu-list">
+      {/* 메뉴 카드 출력 */}
+      <div className={styles.menuContainer}>
+        <div className={styles.menuList} style={{ transform: `translateX(-${currentIndex * 220}px)` }}>
           {visibleItems.map((item) => (
-            <div key={item.id} className="menu-card">
+            <div key={item.id} className={styles.menuCard}>
               <a href={item.link}>
-                <img src={item.image} alt={item.name} />
+                <Image src={item.image} alt={item.name} width={200} height={150} />
                 <p>{item.name}</p>
               </a>
             </div>
@@ -84,8 +86,8 @@ const Home = () => {
       </div>
 
       {/* 갤러리 컴포넌트 추가 */}
-      <h2>Galerie von Gerichten</h2> {/* 갤러리 제목을 독일어로 수정 */}
-      <Gallery items={galleryItems} /> {/* 갤러리 컴포넌트에 갤러리 항목 전달 */}
+      <h2>Galerie von Gerichten</h2>
+      <Gallery items={galleryItems} updateItems={setGalleryItems} />
     </div>
   );
 };

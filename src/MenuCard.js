@@ -1,10 +1,11 @@
 // src/MenuCard.js
 import React from 'react';
+import Image from 'next/image';
 
 function MenuCard({ title, imageSrc }) {
   return (
     <div style={styles.card}>
-      <img src={imageSrc} alt={title} style={styles.image} />
+      <Image src={imageSrc} alt={title} width={200} height={150} style={styles.image} />
       <p style={styles.title}>{title}</p>
     </div>
   );
@@ -20,8 +21,6 @@ const styles = {
     boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.1)',
   },
   image: {
-    width: '100%',
-    height: '150px',
     borderTopLeftRadius: '10px',
     borderTopRightRadius: '10px',
     objectFit: 'cover',

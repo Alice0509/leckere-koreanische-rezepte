@@ -1,5 +1,6 @@
 // src/pages/Page1.js
 import React from 'react';
+import Image from 'next/image';
 import styles from '../styles/Recipe.module.css';
 import Disqus from '../components/Disqus'; // Disqus 컴포넌트 가져오기
 
@@ -14,24 +15,25 @@ const Page1 = () => {
     <div className={styles.pageContainer}>
       <h1 className={styles.title}>Danpatbbang (단팥빵)</h1>
       <section className={styles.recipeSection}>
-        <p><strong>[Zutaten]</strong><br />
-          Weizenmehl (Typ 550) 200 g<br />
-          Trockenhefe 4 g<br />
-          Salz 3 g<br />
-          Zucker 30 g<br />
-          Butter 30 g<br />
-          Ei (Größe S oder M) 1 Stück<br />
-          Milch 70 g<br />
-          <a href="https://search.yahoo.com/search?fr=mcafee&type=E211KR885G0&p=Rote+Bohnenpaste" target="_blank" rel="noopener noreferrer">Rote Bohnenpaste (Anko) 320 g</a>
-        </p>
-        <div className={styles.imageContainer}>
-          <img width="100%" src="/coding1.jpg" alt="Rotes Bohnenbrot, das mit Anko gefüllt ist" />
-        </div>
+      <h2 className={styles.sectionTitle}>[Zutaten]</h2>
+        <ul>
+          <li>Weizenmehl (Typ 550) 200 g</li>
+          <li>Trockenhefe 4 g</li>
+          <li>Salz 3 g</li>
+          <li>zucker 30 g</li>
+          <li>Butter 30 g</li>
+          <li>Ei (Größe S oder M) 1 Stück</li>
+          <li>Milch 70 g</li>
+          <li><a href="https://search.yahoo.com/search?fr=mcafee&type=E211KR885G0&p=Rote+Bohnenpaste" target="_blank" rel="noopener noreferrer">Rote Bohnenpaste (Anko) 320 g</a></li>
+          </ul>
 
+        <div className={styles.imageContainer}>
+        <Image src="/coding1.jpg" alt="Rotes Bohnenbrot, das mit Anko gefüllt ist" width={500} height={500} />
+
+        </div>
+      <h2 className={styles.sectionTitle}>[Tipps zur Herstellung von Azuki-Bohnenpaste]</h2>
         <div className={styles.videoContainer}>
           <iframe 
-            width="560" 
-            height="315" 
             src="https://www.youtube.com/embed/A6VrDRL3qzQ" 
             title="YouTube video player"
             frameBorder="0"
@@ -42,7 +44,7 @@ const Page1 = () => {
       </section>
 
       <section className={styles.stepsSection}>
-        <p><strong>[Zubereitung]</strong></p>
+      <h2 className={styles.sectionTitle}>[Zubereitung]</h2>
         <ol>
           <li>In eine Schüssel lauwarme Milch und Ei geben, dann Weizenmehl, Zucker, Salz, Backpulver und Hefe abmessen und hinzufügen. Dabei das Ei verquirlen und etwas davon aufbewahren, bevor es in die Schüssel kommt.</li>
           <li>Sobald sich der Teig im Teigkneter zu einer Kugel formt, Butter hinzufügen und weiterkneten.</li>
@@ -59,8 +61,9 @@ const Page1 = () => {
       </section>
 
       {/* Disqus 댓글 시스템 추가 */}
-      <Disqus article={article} />
-     
+      <div className={styles.comments}>
+        <Disqus article={article} />
+      </div>
     </div>
   );
 };

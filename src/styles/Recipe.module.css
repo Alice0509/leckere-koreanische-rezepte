@@ -1,51 +1,78 @@
-/* Recipe.module.css */
+/* src/styles/Recipe.module.css */
 
-/* 레시피 페이지 컨테이너 스타일 */
+/* 페이지 전체 컨테이너 스타일 */
 .pageContainer {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #f9f9f9; /* 배경색 */
-    border-radius: 8px; /* 모서리 둥글기 */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
-  }
-  
-  /* 모바일에서의 스타일 조정 */
-@media (max-width: 600px) {
-  .pageContainer {
-      width: 90%; /* 모바일 화면에서는 90% 너비로 설정 */
-      margin: 10px auto; /* 중앙 정렬 */
-      padding: 10px; /* 여백 줄이기 */
-  }
+  padding: 20px;
+  max-width: 800px;
+  margin: 20px auto;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-  /* 제목 스타일 */
-  .title {
-    font-size: 2em;
-    margin-bottom: 20px;
-    text-align: center; /* 제목 중앙 정렬 */
+/* 제목 스타일 */
+.title {
+  text-align: center;
+  font-size: 1.8rem;
+  margin: 20px 0;
+}
+.sectionTitle {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* 이미지 및 비디오 컨테이너 스타일 */
+.imageContainer, .videoContainer {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.imageContainer img {
+  width: 100%; /* 이미지 너비 100% */
+  height: auto; /* 자동 높이 유지 */
+  object-fit: contain; /* 잘리지 않도록 설정 */
+  border-radius: 10px;
+}
+
+.videoContainer iframe {
+  width: 100%;
+  max-width: 560px; /* 원하는 최대 너비 설정 */
+  height: 315px;
+  border: none;
+  border-radius: 10px;
+}
+
+/* 조리 단계 섹션 */
+.stepsSection {
+  margin-top: 30px;
+}
+
+.stepsSection ol {
+  padding-left: 20px;
+  text-align: left; /* 리스트 텍스트 왼쪽 정렬 */
+}
+
+.stepsSection li {
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+/* 댓글 시스템 */
+.comments {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #ddd;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 800px) {
+  .pageContainer {
+    width: 90%;
+    padding: 10px;
   }
-  
-  /* 레시피 섹션 스타일 */
-  .recipeSection {
-    margin-bottom: 30px; /* 섹션 간격 */
+
+  .stepsSection ol {
+    padding-left: 15px;
   }
-  
-  .imageContainer {
-    text-align: center; /* 이미지 중앙 정렬 */
-  }
-  
-  .videoContainer {
-    margin: 20px 0; /* 비디오와 간격 */
-  }
-  
-  /* 조리 단계 섹션 스타일 */
-  .stepsSection {
-    margin-top: 20px; /* 단계 섹션 위쪽 여백 */
-  }
-  
-  /* 댓글 시스템 스타일 */
-  .comments {
-    margin-top: 30px; /* 댓글 섹션 간격 */
-  }
-  
+}

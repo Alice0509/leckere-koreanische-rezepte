@@ -1,5 +1,6 @@
 // src/components/RecipeSteps.js
 import React, { useState } from 'react';
+import Image from 'next/image';
 import styles from './RecipeSteps.module.css';
 
 const steps = [
@@ -18,7 +19,7 @@ export default function RecipeSteps() {
 
   return (
     <div className={styles.stepsContainer}>
-      <img src={steps[currentStep].image} alt={`Step ${steps[currentStep].id}`} className={styles.stepImage} />
+      <Image src={steps[currentStep].image} alt={`Step ${steps[currentStep].id}`} width={500} height={500} className={styles.stepImage} />
       <p className={styles.stepText}>{steps[currentStep].text}</p>
       <div className={styles.buttons}>
         <button onClick={prevStep} className={styles.navButton}>이전</button>
@@ -28,7 +29,7 @@ export default function RecipeSteps() {
         {steps.map((step) => (
           <div key={step.id} className={styles.stepItem}>
             {/* 각 단계마다 고유한 key 설정 */}
-            <img src={step.image} alt={`Step ${step.id}`} />
+            <Image src={step.image} alt={`Step ${step.id}`} width={500} height={500} />
             <p>{step.text}</p>
           </div>
         ))}

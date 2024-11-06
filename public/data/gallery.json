@@ -1,23 +1,52 @@
 [
   {
     "id": 1,
-    "name": "Gallery Dish 1",
-    "image": "/images/gallery/gallery1.jpg",
-    "description": "Delicious Gallery Dish 1",
-    "comments": []
+    "name": "Pecan-Pie",
+    "image": "/images/gallery/gallery1.jpeg",
+    "description": "피칸파이 - Pecan-Pie",
+    "comments": ["Mein Lieblings-Pecan-Pie, das Rezept werde ich bald vorstellen."]
   },
   {
     "id": 2,
-    "name": "Gallery Dish 2",
-    "image": "/images/gallery/gallery2.jpg",
-    "description": "Tasty Gallery Dish 2",
-    "comments": []
+    "name": "Naengmyeon",
+    "image": "/images/gallery/gallery2.jpeg",
+    "description": "냉면 - Nudeln in kalter Brühe",
+    "comments": ["Naengmyeon! Kalte Nudeln, die bei 'Gogi Macha' in Düsseldorf verkauft werden!"]
   },
   {
     "id": 3,
-    "name": "Gallery Dish 3",
-    "image": "/images/gallery/gallery3.jpg",
-    "description": "Yummy Gallery Dish 3",
-    "comments": []
+    "name": "Schokoladenstückchen-Kekse",
+    "image": "/images/gallery/gallery3.jpeg",
+    "description": "초코칩쿠키 - Schokoladenstückchen-Kekse",
+    "comments": [" Es schmeckt wie mein Lieblings 'saftiger Schokoladenstückchen-Keks' aus Korea. Sehr empfehlenswert!"]
+  },  
+  {
+    "id": 4,
+    "name": "Soboro-Brot",
+    "image": "/images/gallery/gallery4.jpeg",
+    "description": "소보로 빵 - Soboro-Brot",
+    "comments": ["War die Ofentemperatur vielleicht etwas zu hoch?"]
+  },  
+  {
+    "id": 5,
+    "name": "Koreanisches Wurstbrot",
+    "image": "/images/gallery/gallery5.jpeg",
+    "description": "한국소시지빵 - Koreanisches Wurstbrot",
+    "comments": ["In Korea machen wir Wurstbrot so"]
+  },  
+  {
+    "id": 6,
+    "name": "Streusel",
+    "image": "/images/gallery/gallery6.jpeg",
+    "description": "소보로 - Streuselt",
+    "comments": ["Soboro machen, So in eine Schüssel geben und im Kühlschrank aufbewahren"]
+  },  
+  {
+    "id": 7,
+    "name": "Danpatbbang",
+    "image": "/images/gallery/gallery7.jpeg",
+    "description": "단팥빵 - Danpatbbang ",
+    "comments": ["Nicht schön, aber leckerer Danpatbbang"]
   }
+
 ]

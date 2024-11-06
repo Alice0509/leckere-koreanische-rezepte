@@ -52,7 +52,7 @@
     {
       "id": 3,
       "name": "Tteokbokki (떡볶이)",
-      "image": "/tteokbokki.png",
+      "image": "/images/dishes/tteokbokki.png",
       "link": "/recipes/3",
       "description": "Ich möchte Ihnen das Rezept für Tteokbokki vorstellen. In Korea gibt es wirklich viele verschiedene Arten von Tteokbokki, sodass es viele verschiedene Geschmäcker und Zubereitungsarten gibt. Daher werde ich in Zukunft viele Rezepte für Tteokbokki vorstellen.\n\nDas wichtigste Element in Tteokbokki sind die beiden Arten von Teig, die verwendet werden. Es gibt die aus Weizenmehl hergestellten Teigstücke, die als 'Milttteok' bekannt sind, und die aus Reismehl hergestellten Teigstücke, die 'Reistteok' genannt werden. In Korea gibt es also auch die Unterscheidung zwischen Fans von Reistteok und Fans von Milttteok. Man könnte sagen, dass Reistteok etwas zäher ist. Viele Menschen behaupten jedoch, dass die Soße besser in Milttteok eindringt und es dadurch leckerer schmeckt.\n\nIn Deutschland kann man diese Zutaten oft in asiatischen Märkten finden. Ich kaufe alle verfügbaren Sorten. Informationen über die verschiedenen Arten von Teig finden Sie auf der Seite 'Zutaten'.",
       "tips": [
@@ -79,7 +79,7 @@
     {
       "id": 4,
       "name": "Schokoladenkekse (초코칩쿠키)",
-      "image": "/chocolate_chip_cookie.jpg",
+      "image": "/images/dishes/chocolate_chip_cookie.jpg",
       "link": "/recipes/4",
       "ingredients": [
         "버터 100g",
@@ -95,7 +95,7 @@
     {
       "id": 5,
       "name": "Pekannusskuchen (피칸파이)",
-      "image": "/pecan_pie.jpg",
+      "image": "/images/dishes/pecan_pie.jpg",
       "link": "/recipes/5",
       "ingredients": [
         "피칸 200g",
@@ -110,7 +110,7 @@
     {
       "id": 6,
       "name": "Scharfes Rindfleischsuppen (파육개장)",
-      "image": "/spicy_beef_soup.jpg",
+      "image": "/images/dishes/spicy_beef_soup.png",
       "link": "/recipes/6",
       "ingredients": [
         "소고기 300g",
@@ -128,7 +128,7 @@
     {
       "id": 7,
       "name": "Kimchi (김치)",
-      "image": "/Kimchi.jpg",
+      "image": "/images/dishes/default.png",
       "link": "/recipes/7",
       "ingredients": [
         "배추 1개",

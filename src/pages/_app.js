@@ -1,5 +1,8 @@
 // src/pages/_app.js
 import '../styles/styles.css';
+import 'swiper/css'; // Swiper 기본 CSS 임포트
+import 'swiper/css/navigation'; // 네비게이션 CSS 임포트
+import 'swiper/css/pagination'; // 페이징 CSS 임포트
 import React, { useEffect } from 'react';
 import Layout from '../components/Layout';
 import { useRouter } from 'next/router';
@@ -38,6 +41,7 @@ export default function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Koreanische Rezepte - Rezepte für die Seele</title> {/* 여기에 title 설정 */}
       </Head>
       <Layout>

@@ -1,63 +1,93 @@
-import React, { useState, useEffect } from 'react';
+// src/components/Gallery.js
+import React, { useState } from 'react';
 import styles from './Gallery.module.css'; // 갤러리 스타일
+import Image from 'next/image';
+import { Swiper, SwiperSlide } from 'swiper/react'; // Swiper 컴포넌트 임포트
+import { Navigation, Pagination, Autoplay } from 'swiper'; // Swiper 모듈 임포트
+import 'swiper/css'; // Swiper 기본 CSS 임포트
+import 'swiper/css/navigation'; // 네비게이션 CSS 임포트
+import 'swiper/css/pagination'; // 페이징 CSS 임포트
 
-const Gallery = () => {
-  const [dishes, setDishes] = useState([]); // dishes 배열 상태 정의
+const Gallery = ({ items, updateItems }) => { // 'updateItems' prop 추가
   const [newComment, setNewComment] = useState('');
   const [commentDishId, setCommentDishId] = useState(null); // 코멘트를 남길 dish의 ID
-
-  useEffect(() => {
-    // gallery.json 파일에서 데이터 가져오기
-    fetch('/data/gallery.json') // dishes.json 대신 gallery.json으로 수정
-      .then((response) => response.json())
-      .then((data) => setDishes(data))
-      .catch((error) => console.error('Error fetching dishes:', error));
-  }, []);
 
   const handleCommentSubmit = (id) => {
     if (newComment.trim() === '') return;
 
-    // 코멘트를 해당 dish의 JSON 데이터에 추가하는 로직
-    const updatedDishes = dishes.map((dish) => {
-      if (dish.id === id) {
-        return { ...dish, comments: [...(dish.comments || []), newComment] }; // 기존 코멘트 배열에 추가
+    const updatedItems = items.map((item) => {
+      if (item.id === id) {
+        return { ...item, comments: [...(item.comments || []), newComment] };
       }
-      return dish;
+      return item;
     });
 
-    setDishes(updatedDishes);
-    setNewComment(''); // 입력 필드 초기화
-    setCommentDishId(null); // 코멘트를 남길 dish ID 초기화
+    updateItems(updatedItems); // 상위 컴포넌트에 상태 업데이트 함수 호출
+
+    setNewComment('');
+    setCommentDishId(null);
   };
 
   return (
     <div className={styles.gallery}>
-      {dishes.map((dish) => (
-        <div key={dish.id} className={styles.dish}>
-          <img src={dish.image} alt={dish.name} />
-          <h2>{dish.name}</h2>
-          <p>{dish.description}</p>
-          {commentDishId === dish.id ? ( // 현재 코멘트를 남기고 있는 dish인지 확인
-            <>
-              <input
-                type="text"
-                placeholder="Kommentar hinterlassen" // 독일어로 수정
-                value={newComment}
-                onChange={(e) => setNewComment(e.target.value)}
-                onKeyDown={(e) => e.key === 'Enter' && handleCommentSubmit(dish.id)}
+      <Swiper
+        modules={[Navigation, Pagination, Autoplay]}
+        spaceBetween={20}
+        slidesPerView={1}
+        navigation
+        pagination={{ clickable: true }}
+        autoplay={{ delay: 15000, disableOnInteraction: false }}
+        loop={true}
+        breakpoints={{
+          640: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+          },
+          1024: {
+            slidesPerView: 4,
+            spaceBetween: 20,
+          },
+        }}
+      >
+        {items.map((dish) => (
+          <SwiperSlide key={dish.id}>
+            <div className={styles.dish}>
+              <Image 
+                src={dish.image} 
+                alt={dish.name} 
+                width={500} 
+                height={500} 
+                className={styles.galleryImage} 
               />
-              <button onClick={() => handleCommentSubmit(dish.id)}>Absenden</button> {/* 독일어로 수정 */}
-            </>
-          ) : (
-            <button onClick={() => setCommentDishId(dish.id)}>Kommentar hinterlassen</button> // 독일어로 수정
-          )}
-          <div>
-            {dish.comments && dish.comments.map((comment, index) => (
-              <p key={index}>{comment}</p>
-            ))}
-          </div>
-        </div>
-      ))}
+              <h2>{dish.name}</h2>
+              <p>{dish.description}</p>
+              {commentDishId === dish.id ? (
+                <>
+                  <input
+                    type="text"
+                    placeholder="Kommentar hinterlassen"
+                    value={newComment}
+                    onChange={(e) => setNewComment(e.target.value)}
+                    onKeyDown={(e) => e.key === 'Enter' && handleCommentSubmit(dish.id)}
+                  />
+                  <button onClick={() => handleCommentSubmit(dish.id)}>Absenden</button>
+                </>
+              ) : (
+                <button onClick={() => setCommentDishId(dish.id)}>Kommentar hinterlassen</button>
+              )}
+              <div>
+                {dish.comments && dish.comments.map((comment, index) => (
+                  <p key={index}>{comment}</p>
+                ))}
+              </div>
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
     </div>
   );
 };

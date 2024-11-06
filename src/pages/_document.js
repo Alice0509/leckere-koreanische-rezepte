@@ -10,7 +10,6 @@ class MyDocument extends Document {
           <meta name="keywords" content="Koreanische Rezepte, koreanisches Essen, traditionelle koreanische Küche" />
           <meta name="author" content="Joan" /> {/* 작성자 정보 */}
           <link rel="icon" href="/Logo.png" /> {/* 파비콘 설정 */}
-          <meta name="viewport" content="width=device-width, initial-scale=1" /> {/* 뷰포트 설정 추가 */}
         </Head>
         <body>
           <Main />
