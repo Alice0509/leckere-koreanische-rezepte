@@ -21,9 +21,12 @@ const RecipePage = ({ recipe }) => {
     title: recipe.name,
   };
 
-  const imageUrl = recipe.image && recipe.image.startsWith('/') 
-  ? `${process.env.NEXT_PUBLIC_BASE_URL}${recipe.image}` 
+  const imageUrl = recipe.image && recipe.image.startsWith('/')
+  ? recipe.image // 이미 올바른 경로이므로 그대로 사용
   : '/images/default.png';
+
+<Image src={imageUrl} alt={recipe.name} width={500} height={500} unoptimized />
+
 
   return (
     <div className={styles.pageContainer}>
