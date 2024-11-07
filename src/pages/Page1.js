@@ -28,7 +28,7 @@ const Page1 = () => {
           </ul>
 
         <div className={styles.imageContainer}>
-        <Image src="/coding1.jpg" alt="Rotes Bohnenbrot, das mit Anko gefüllt ist" width={500} height={500} />
+        <Image src="/coding1.jpg" alt="Danpatbbang, das mit Anko(Azuki-Bohnenpaste) gefüllt ist" width={500} height={500} />
 
         </div>
       <h2 className={styles.sectionTitle}>[Tipps zur Herstellung von Azuki-Bohnenpaste]</h2>
@@ -49,7 +49,7 @@ const Page1 = () => {
           <li>In eine Schüssel lauwarme Milch und Ei geben, dann Weizenmehl, Zucker, Salz, Backpulver und Hefe abmessen und hinzufügen. Dabei das Ei verquirlen und etwas davon aufbewahren, bevor es in die Schüssel kommt.</li>
           <li>Sobald sich der Teig im Teigkneter zu einer Kugel formt, Butter hinzufügen und weiterkneten.</li>
           <li>Den Teig für die erste Gärung etwa 50 Minuten ruhen lassen.</li>
-          <li>Währenddessen die Rote Bohnenpaste (Anko) in 40 g große Kugeln formen und bereitstellen.</li>
+          <li>Währenddessen die Azuki-Bohnenpaste (Anko) in 40 g große Kugeln formen und bereitstellen.</li>
           <li>Nach der ersten Gärung den Teig durchkneten, um die Luft herauszulassen, und in 8 Stücke teilen. Den Teig mit Folie abdecken und etwa 10 Minuten für die Zwischenruhe ruhen lassen.</li>
           <li>Nach der Zwischenruhe den Teig flach ausrollen, die Bohnenpaste darauf legen und den Teig zu einer runden Form schließen.</li>
           <li>Den Teig flach drücken und mit einem Nudelholz in der Mitte kräftig drücken. Mit einer Schere sechs Schnitte in den Teig machen.</li>
