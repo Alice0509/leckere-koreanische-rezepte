@@ -37,18 +37,15 @@ const Page2 = () => {
       
         <h2 className={styles.sectionTitle}>[Zutaten für die Soboro-Kekse]</h2>
           <ul>
-            <li>Weizenmehl 120 g</li>
-            <li>Maismehl 35 g</li>
-            <li>Backpulver 2 g</li>
-            <li>Magermilchpulver 9 g</li>
-            <li>Natron 1 g</li>
-            <li>Alle trockenen Zutaten miteinander vermischen.</li>
-            <li>Butter 60 g</li>
-            <li>Erdnussbutter 40 g</li>
-            <li>Zucker 60 g</li>
-            <li>Maissirup 5 g</li>
-            <li>Eine Prise Salz</li>
-            <li>1 Eigelb</li>
+            <li>Butter 50g</li>
+            <li>Erdnussbutter 20g (Crunchy Erdnussbutter ist auch in Ordnung)</li>
+            <li>Zucker 60g</li>
+            <li>Zuerst die ersten drei Zutaten gut miteinander vermischen. Es ist hilfreich, die Butterzutaten vorher auf Zimmertemperatur zu bringen.</li>
+            <li>Weizenmehl (Typ 550) 80g</li>
+            <li>Mandelmehl 20g</li>
+            <li>Backpulver 2g</li>
+            <li>Salz 1g</li>
+            <li>Honig 10g</li> 
           </ul>
 
         <p>
@@ -63,7 +60,7 @@ const Page2 = () => {
         <section className={styles.stepsSection}>
         <h2 className={styles.sectionTitle}>[Zubereitung]</h2>
           <ol>
-            <li>Den Teig für das Brot in einer Schüssel mit lauwarmer Milch, Ei, Mehl, Zucker, Salz, Backpulver und Hefe vermischen. Das Ei leicht aufschlagen und etwas davon beiseitestellen.</li>
+            <li>Den Teig für das Brot in einer Schüssel mit lauwarmer Milch, Ei, Mehl, Zucker, Salz, Backpulver und Hefe vermischen. </li>
             <li>Den Teig in einer Teigmaschine kneten. Sobald er zusammenkommt, Butter hinzufügen und weiterkneten, bis er glatt ist.</li>
             <li>Den Teig abgedeckt etwa 50 Minuten an einem warmen Ort gehen lassen.</li>
             <li>In der Zwischenzeit die Soboro-Keksmischung vorbereiten.</li>
@@ -71,7 +68,6 @@ const Page2 = () => {
             <li>Die Teigstücke flach ausrollen und mit den Händen leicht zusammendrücken.</li>
             <li>Die Soboro-Mischung auf den Brotteig geben und leicht in die Mitte drücken.</li>
             <li>Den Teig auf ein Backblech legen und nochmals 45 Minuten gehen lassen.</li>
-            <li>Das zurückbehaltene Ei mit etwas Wasser mischen und auf den Teig streichen.</li>
             <li>Den Ofen auf 190 Grad vorheizen und die Brote etwa 10 Minuten backen.</li>
             <li>Soboro-Brot ist fertig!</li>
           </ol>

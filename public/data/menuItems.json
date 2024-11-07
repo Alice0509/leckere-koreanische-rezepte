@@ -82,15 +82,33 @@
       "image": "/images/dishes/chocolate_chip_cookie.jpg",
       "link": "/recipes/4",
       "ingredients": [
-        "버터 100g",
-        "설탕 100g",
-        "초코칩 150g",
-        "밀가루 200g"
+        "Weizenmehl Typ 550 100g",
+        "Weizenmehl Typ 405 100g",
+        "Ei (Größe S)",
+        "Butter 120g",
+        "Brauner Zucker (Backzucker) 90g",
+        "Puderzucker 60g",
+        "Kakaopulver 15g",
+        "Natron 3g",
+        "Dunkle Schokoladenchips 140g",
+        "Vanilleextrakt 2 Tropfen",
+        "Salz 2g"
       ],
       "instructions": [
-        "버터와 설탕을 섞고, 초코칩과 밀가루를 추가합니다...",
-        "잘 섞은 후, 오븐에 굽습니다."
-      ]
+        "Nehmen Sie die Butter und das Ei aus dem Kühlschrank und lassen Sie sie auf Zimmertemperatur kommen.",
+        "Die Butter mit einem Schneebesen gut aufschlagen, dann den braunen Zucker hinzufügen und gut vermengen.",
+        "Wenn der Zucker sich etwas aufgelöst hat, den Puderzucker hinzugeben und mischen.",
+        "Das Ei hinzufügen und gut vermengen, anschließend zwei Tropfen Vanilleextrakt dazugeben.",
+        "Das gesiebte Mehl (Typ 550 und 405), Natron, Kakaopulver und Salz hinzufügen.",
+        "Den Teig vorsichtig in einer '#' Bewegung mischen.",
+        "Wenn alle Zutaten gut vermischt sind, entsteht ein schöner brauner Teig.",
+        "Die Schokoladenchips hinzufügen und gut unterheben. (Informationen zu den Schokoladenchips finden Sie auf der Zutatenliste.)",
+        "Den Teig etwa 30 Minuten im Kühlschrank ruhen lassen.",
+        "Nach dem Kühlen den Teig herausnehmen und in Portionen von 25 bis 35 Gramm teilen.",
+        "Die Teigkugeln auf ein Backblech legen und leicht andrücken.",
+        "Im vorgeheizten Ofen bei 175-180 Grad etwa 9 Minuten backen (die Backzeit kann je nach Ofen variieren).",
+        "Fertig! Die besten weichen koreanischen Schokoladenkekse sind bereit zum Genießen."
+    ]
     },
     {
       "id": 5,
@@ -98,13 +116,51 @@
       "image": "/images/dishes/pecan_pie.jpg",
       "link": "/recipes/5",
       "ingredients": [
-        "피칸 200g",
-        "설탕 100g",
-        "계란 3개",
-        "버터 50g"
+        "Menge für einen Teigboden",
+        "Weizenmehl (Typ 550) 187,5g",
+        "Salz 1/2 Teelöffel",
+        "Zucker (weißer Zucker) 1/2 Esslöffel",
+        "Butter 84,75g",
+        "Pflanzenfett (Shortening) 51,25g",
+        "Ei 1/2 Ei",
+        "Essig 1/2 Esslöffel",
+        "Wasser 2-2,5 Esslöffel",
+
+        "Füllung für Pie",
+        "ungesalzene Butter 113g",
+        "Brauner Zucker 260g",
+        "Salz 1/2 Teelöffel",
+        "Zimt 1/2 Teelöffel",
+        "Eier 3 Stück",
+        "Weizenmehl (typ 550) 2 Esslöffel",
+        "Milch 5 Esslöffel",
+        "Apfelessig 2 Teelöffel",
+        "Vanilleextrakt 2 Teelöffel",
+        "Gehackte Pekannüsse 1 Tasse + ganze Pekannüsse 1 Tasse"
+
       ],
       "instructions": [
-        "모든 재료를 섞고, 오븐에 굽습니다."
+        "Herstellung eines Pie-Teigs (Pie-Crust)",
+        "In einer großen Schüssel Mehl, Zucker und Salz mischen.",
+        "Dann die kalte Butter in kleine Stücke schneiden und hinzufügen (das erleichtert die Teigbildung).",
+        "Anschließend das Pflanzenfett (Shortening) ebenfalls in kleine Stücke schneiden und hinzufügen.",
+        "Mit einem Spatel schnell vermengen (damit die Butter nicht schmilzt); es muss nicht perfekt vermischt sein, die Butter sollte noch sichtbar und klumpig sein.",
+        "Das verquirlte Ei, den Essig und das Wasser zum Teig geben.",
+        "Mit einem Spatel oder einer Gabel gut vermengen.",
+        "Den Teig zu einer runden, leicht flachgedrückten Kugel formen.",
+        "In Frischhaltefolie wickeln und mindestens 30 Minuten im Kühlschrank aufbewahren.",
+        "Den Teig anschließend auf Wachspapier mit einem Nudelholz ausrollen und an die gewünschte Pie-Form anpassen.",
+        "Ich verwende normalerweise eine Pie-Form mit einem Boden von 8-9 Zoll (ca. 20-23 cm). Wenn die Pie-Form größer ist, können Sie die Zutatenmenge einfach verdoppeln.",
+      
+        "Füllung für Pie", 
+        "Geschmolzene Butter mit Zucker, Mehl, Salz und Zimt gut vermischen.",
+        "Eier verquirlen und dann Milch, Apfelessig und Vanilleextrakt hinzufügen.",
+        "Alles gut vermischen, dann die leicht gerösteten gehackten Pekannüsse unterheben.",
+        "Die Mischung in die vorbereitete Pie-Crust in der Pie-Form gießen.",
+        "Falls gewünscht, mit ganzen Pekannüssen ein Muster dekorieren (optional).",
+        "Im vorgeheizten Ofen bei 190°C etwa 55 Minuten backen (abhängig vom Ofen).",
+        "Guten Appetit!"
+
       ]
     },
     {
